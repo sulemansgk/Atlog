@@ -1,0 +1,9 @@
+[17-Feb-2015 04:57:24 UTC] PHP Parse error:  syntax error, unexpected T_DEFAULT in /home/devaliso/public_html/atm/application/config/database.php on line 55
+[17-Feb-2015 05:05:40 UTC] PHP Parse error:  syntax error, unexpected $end in /home/devaliso/public_html/atm/application/models/emergency_model.php on line 89
+[17-Feb-2015 05:09:55 UTC] PHP Parse error:  syntax error, unexpected $end in /home/devaliso/public_html/atm/application/controllers/instructions.php on line 179
+[28-Feb-2015 14:59:47 UTC] PHP Parse error:  syntax error, unexpected T_PUBLIC in /home/devaliso/public_html/atm2/application/controllers/index.php on line 223
+[28-Feb-2015 15:02:03 UTC] PHP Parse error:  syntax error, unexpected T_PUBLIC in /home/devaliso/public_html/atm2/application/controllers/index.php on line 223
+[28-Feb-2015 15:04:52 UTC] PHP Parse error:  syntax error, unexpected $end in /home/devaliso/public_html/atm2/application/controllers/index.php on line 667
+[01-Mar-2015 03:23:38 America/Chicago] PHP Warning:  Unterminated comment starting line 49 in /home/devaliso/public_html/atm2/index.php on line 49
+[01-Mar-2015 03:23:38 America/Chicago] PHP Warning:  Unterminated comment starting line 77 in /home/devaliso/public_html/atm2/index.php on line 77
+[01-Mar-2015 03:23:39 America/Chicago] PHP Parse error:  syntax error, unexpected $end in /home/devaliso/public_html/atm2/index.php on line 176
