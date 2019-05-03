@@ -248,7 +248,7 @@ class Elog extends CI_Controller {
 		$order = $this->session->userdata("order");
 		$data = array();
 		$this->load->library("pagination");
-		$per_page = 20; 	// how many pagination page show in Main View
+		$per_page = 200; 	// how many pagination page show in Main View
 		$total = $this->elog_model->count_rec("form_logs");  //total post
 		if($this->uri->segment(3) == "faultreports"){
 			$data['logs'] = $this->elog_model->getAllLogs($per_page, $this->uri->segment(4),$accesslogs_filter);

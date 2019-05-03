@@ -481,8 +481,8 @@ function bombwarning(id,curr_elem,popup_title,callstatus){
 	
 }
 
-function practiseemergency(id,curr_elem,popup_title,callstatus){
-	
+function practiceemergency(id,curr_elem,popup_title,callstatus){
+		 
 	$( "#myModal" ).modal( "show" );
 	var data = new Object();
 	data["id"] = id;
@@ -1288,6 +1288,23 @@ function metcondition(id,curr_elem,popup_title){
 	
 }
 
+function fullemergency(id,curr_elem,popup_title){
+
+	$( "#myModal" ).modal( "show" );
+	var data = new Object();
+	data["id"] = id;
+	$.ajax({
+		url:base_url+"emergency/fullemergency_edit",
+		type:"post",
+		data:data,
+		success:function(html){
+			
+			$(".modal-title").html(popup_title);
+			$(".modal-body").html(html);
+		}
+	});
+	
+}
 
 function updateRunwayInUse(log_id){
 	if(confirm("Are you sure you want to update?")){

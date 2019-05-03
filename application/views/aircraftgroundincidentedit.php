@@ -34,10 +34,8 @@
                         <span class="form-field">
                             <?  $user_data = $this->db->get_where("tblagent",array("agentcode"=>$log["initial"]))->result_array(); 
                             ?>
-                            <input type="hidden" name="initial" value="
-                            <?=$log["initial"]?>" />
-                            <input type="text" readonly="readonly" class="form-control" value="
-                            <?=$user_data[0]["agentname"]?>" />
+                            <input type="hidden" name="initial" value="<?=$log["initial"]?>" />
+                            <input type="text" readonly="readonly" class="form-control" value="<?=$user_data[0]["agentname"]?>" />
                         </span>
                     </div>
                     <div class="col-md-6">

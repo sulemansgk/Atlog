@@ -236,24 +236,29 @@ $unit_name = $this->db->get_where("units",array("unit_id"=>$_POST["unit_id"]))->
 								<td>
 									<?
 									if(isset($log["details"]["subject"])){
-									if($log["log_type"] == "generalentry"){
-									$subject_text = "";
-									$subject_text = $this->db->get_where("subjectform",array("id"=>trim($log["details"]["subject"])))->result_array();
-									if(!empty($subject_text)){
-									$subject_text = $subject_text[0]["subject"];
-									print($subject_text);
+										if($log["log_type"] == "generalentry"){
+										$subject_text = "";
+										$subject_text = $this->db->get_where("subjectform",array("id"=>trim($log["details"]["subject"])))->result_array();
+											if(!empty($subject_text)){
+												$subject_text = $subject_text[0]["subject"];
+												print($subject_text);
+											}
+											else{
+												print($log["details"]["subject"]);
+											}
+										}
+										else{
+											print($log["details"]["subject"]);
+										}
 									}
-									}else{
-									print($log["details"]["subject"]);
-									}
-									}else if(isset($log["details"]["type_of_incident"])){
-									print($log["details"]["type_of_incident"]);
+									else if(isset($log["details"]["type_of_incident"])){
+										print($log["details"]["type_of_incident"]);
 									}
 									
 									?>
 								</td>
 								<td>
-									<?
+									<? 
 									if(!empty($log["details"]["description"])){
 									echo "Description : " . $log["details"]["description"].'<br>';
 									}
@@ -267,7 +272,7 @@ $unit_name = $this->db->get_where("units",array("unit_id"=>$_POST["unit_id"]))->
 									echo "Departure Runway: ". $runway_in_use_depart[0]["runway"]. "<br>";
 									}
 									if(!empty($log["details"]['description'])){
-									echo "Description: ". $log["details"]['description'];
+									echo "Description: ". $log["details"]['description']. "<br>";
 									}
 									}
 									if(!empty($log["details"]["callsign"])){
@@ -279,6 +284,19 @@ $unit_name = $this->db->get_where("units",array("unit_id"=>$_POST["unit_id"]))->
 									if(!empty($log["details"]["ssr_transporter_code"])){
 									echo "Ssr Transporter Code : " . $log["details"]["ssr_transporter_code"].'<br>';
 									}
+									//
+									if(!empty($log["details"]["reason"])){
+									echo "Reason : " . $log["details"]["reason"].'<br>';
+									}
+									
+									if(!empty($log["details"]["cat_routing"])){
+									echo "Routing : " . $log["details"]["cat_routing"].'<br>';
+									}
+
+									if(!empty($log["details"]["subject"])){
+									echo "Subject : " . $log["details"]["subject"].'<br>';
+									}
+									//
 									if(!empty($log["details"]["point_of_departure"])){
 									echo "Point of Departure : " . $log["details"]["point_of_departure"].'<br>';
 									}

@@ -164,7 +164,7 @@ $user_unit = unserialize($user_logged);
 							<?
 							
 							foreach($logs as $key=>$log){
-							
+								
 							if(!empty($log['details'])){
 							$subject = "";
 							if($log["log_type"] == "generalentry"){
@@ -322,10 +322,13 @@ $user_unit = unserialize($user_logged);
 									}else{
 									if(isset($log["details"]["any_other_details"])){
 									print('Description :'. strip_tags($log["details"]["any_other_details"])).'<br>';
+									if (isset($log["details"]["reason"])) {
+											print(strip_tags($log["details"]["reason"])).'<br>';
+										}
 									}else if(isset($log["details"]["remarks"])){
 									print(strip_tags($log["details"]["remarks"]));
 									}else if(isset($log["details"]["description"])){
-									print(strip_tags($log["details"]["description"]));
+									//print(strip_tags($log["details"]["description"]));
 									}
 									}
 									?>
@@ -382,7 +385,7 @@ $user_unit = unserialize($user_logged);
 									if(!empty($log["details"]["any_other_details"])){
 									echo "Details : " . $log["details"]["any_other_details"].'<br>';
 									}
-									}elseif($log['log_type'] == 'Met Condition'){
+									}elseif($log['log_table'] == 'met_condition'){
 									if(!empty($log["details"]["condition"])){
 									echo "Condition : " . strtoupper($log["details"]["condition"]).'<br>';
 									}

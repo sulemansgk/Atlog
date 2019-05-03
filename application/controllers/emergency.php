@@ -291,6 +291,16 @@ class Emergency extends CI_Controller {
 		$viewData["frnstatuses"] = $this->emergency_model->getAllFrnStatuses();
 		$this->load->view("domesticfireedit",$viewData);
 	}
+
+	public function fullemergency_edit(){
+	
+		$rec = $this->emergency_model->getEmergencyLog($_POST["id"]);
+		$viewData["log"] = $rec[0];
+		$viewData["log"]["callstatus"] = $_POST["callstatus"];
+		$viewData["frnstatuses"] = $this->emergency_model->getAllFrnStatuses();
+		$this->load->view("fullemergencyedit",$viewData);
+	}
+
 	public function fuelsipllageedit(){
 		$rec = $this->emergency_model->getEmergencyLog($_POST["id"]);
 		$viewData["log"] = $rec[0];

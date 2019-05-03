@@ -176,6 +176,21 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="col-md-2">
+					<div class="form-group">
+						
+						
+						<div class="form-field">
+							<input type="radio" id="radio" name="condition" value="lvp" required="required" class="md-radiobtn" disabled="disabled" <? if($met_con->condition == 'lvp'){ ?> checked="checked" <? } ?> >
+							<label for="radio3">
+								<span class="inc"></span>
+								<span class="check"></span>
+								<span class="box"></span>
+							LVP </label>
+						</div>
+					</div>
+				</div>
 				
 				
 			</div>

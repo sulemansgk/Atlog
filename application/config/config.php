@@ -329,7 +329,9 @@ $config['compress_output'] = FALSE;
 |
 */
 //$config['time_reference'] = 'local';
-date_default_timezone_set("Asia/Dubai");
+//date_default_timezone_set("Asia/Dubai");
+date_default_timezone_set('UTC-4');
+
 // UTC TimeZone
 //$config['time_reference'] = 'Asia/Dubai';
 

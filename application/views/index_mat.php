@@ -1,3 +1,5 @@
+
+<?php date_default_timezone_set('America/New_York');?>
 <script type="text/javascript">
 setTimeout(function(){
 window.location.reload(1);
@@ -1844,7 +1846,12 @@ if (!empty($total_units)) { ?>
 	<script>
 		function date_time(id)
 	{
-	date = new Date;
+	
+	
+
+
+	date = new Date(<?php echo date("Y, n - 1, d, H, i, s") ?>);
+	
 	year = date.getFullYear();
 	month = date.getMonth();
 	months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
